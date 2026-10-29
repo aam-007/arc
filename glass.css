@@ -1,0 +1,478 @@
+/* Modern Glass: a complete theme, independent of the base theme palette. */
+body[data-theme='glass'] {
+  --bg: #edf3f8;
+  --panel: #ffffffd6;
+  --solid: #f9fcff;
+  --text: #192b42;
+  --muted: #53677f;
+  --line: #42608024;
+  --accent: #245caa;
+  --soft: #e0ecfa;
+  --radius: 24px;
+  --shadow: 0 12px 32px #29476b0c, inset 0 1px 0 #fff;
+  color-scheme: light;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 3% 4%, #d5e9ff 0, transparent 48%),
+    radial-gradient(ellipse at 100% 70%, #dde9f4 0, transparent 55%), var(--bg);
+  background-attachment: fixed;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+}
+
+body[data-theme='glass'] h1,
+body[data-theme='glass'] h2,
+body[data-theme='glass'] h3 {
+  font-family: Manrope, 'Segoe UI', sans-serif;
+}
+body[data-theme='glass'] h1 {
+  font-weight: 650;
+  letter-spacing: -0.045em;
+}
+body[data-theme='glass'] .eyebrow {
+  color: #526985;
+  letter-spacing: 0.16em;
+}
+body[data-theme='glass'] .muted,
+body[data-theme='glass'] small {
+  color: var(--muted);
+}
+
+/* Every frosted surface has an opaque fallback and a crisp reflective edge. */
+body[data-theme='glass'] :is(.panel, .theme-card, .choice, .scenario-card) {
+  background: var(--panel);
+  border: 1px solid #ffffff;
+  border-radius: var(--radius);
+  box-shadow:
+    var(--shadow),
+    0 0 0 1px #6889ad0b;
+}
+body[data-theme='glass']
+  :is(.panel, .theme-card, .choice, .scenario-card, .sidebar, .theme-switch, dialog) {
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  backdrop-filter: blur(18px) saturate(125%);
+}
+body[data-theme='glass'] .panel {
+  padding: 28px;
+}
+body[data-theme='glass'] .btn {
+  color: #fff;
+  background: #234f90;
+  border: 1px solid #19437f;
+  border-radius: 14px;
+  box-shadow:
+    0 4px 10px #245caa18,
+    inset 0 1px 0 #ffffff26;
+  transition:
+    background 0.18s,
+    box-shadow 0.18s,
+    transform 0.18s;
+}
+body[data-theme='glass'] .btn:hover {
+  background: #1d437d;
+}
+body[data-theme='glass'] .btn.secondary {
+  background: #ffffffcc;
+  color: #244d82;
+  border: 1px solid #bfcfe2;
+  box-shadow:
+    0 2px 6px #29476b06,
+    inset 0 1px 0 #fff;
+}
+body[data-theme='glass'] .btn.secondary:hover {
+  background: #eef5ff;
+  border-color: #92afd2;
+}
+body[data-theme='glass'] .btn.link {
+  color: #245caa;
+  background: none;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+}
+body[data-theme='glass'] :is(input, select) {
+  color: #192b42;
+  background: #fbfdff;
+  border: 1px solid #b8c9dd;
+  border-radius: 12px;
+  box-shadow: inset 0 1px 3px #29476b05;
+}
+body[data-theme='glass'] input::placeholder {
+  color: #53677f;
+  opacity: 1;
+}
+body[data-theme='glass'] :is(input, select):focus-visible {
+  outline: 3px solid #245caa2b;
+  outline-offset: 1px;
+  border-color: #4b7fbd;
+}
+body[data-theme='glass'] input[type='range'] {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  accent-color: #245caa;
+}
+body[data-theme='glass'] option {
+  color: #192b42;
+  background: #fff;
+}
+body[data-theme='glass'] .pill {
+  background: #e3eefb;
+  color: #28598f;
+}
+body[data-theme='glass'] .progress {
+  background: #d9e4f0;
+}
+body[data-theme='glass'] .progress i,
+body[data-theme='glass'] .bar-track i {
+  background: #4279b9;
+}
+body[data-theme='glass'] .bar-track {
+  background: #e1e9f3;
+}
+body[data-theme='glass'] .grade {
+  background: #e3eefb;
+  color: #24588f;
+}
+
+/* Onboarding is part of the theme, rather than a separate landing page. */
+body[data-theme='glass'] .topbar {
+  height: 100px;
+}
+body[data-theme='glass'] .brand {
+  color: #1a3557;
+}
+body[data-theme='glass'] .top-note {
+  color: #536d89;
+}
+body[data-theme='glass'] .theme-switch {
+  border: 1px solid #fff;
+  background: #ffffffc7;
+  box-shadow: 0 3px 12px #29476b0a;
+}
+body[data-theme='glass'] .theme-dot.active {
+  outline-color: #3467a5;
+}
+body[data-theme='glass'] .onboard {
+  margin-top: 28px;
+}
+body[data-theme='glass'] .onboard-top {
+  margin-bottom: 44px;
+}
+body[data-theme='glass'] .intro h1 {
+  color: #192f4b;
+  line-height: 1.12;
+}
+body[data-theme='glass'] .intro p {
+  color: #435a73;
+  font-size: 16px;
+}
+body[data-theme='glass'] .steps span {
+  background: #b9cde0;
+}
+body[data-theme='glass'] .steps .done {
+  background: #4279b9;
+}
+body[data-theme='glass'] .theme-grid {
+  gap: 18px;
+}
+body[data-theme='glass'] .theme-card {
+  padding: 12px;
+  text-align: left;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+body[data-theme='glass'] .theme-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px #29476b14;
+}
+body[data-theme='glass'] .theme-card.selected {
+  border-color: #467ab9;
+  box-shadow:
+    0 0 0 2px #467ab925,
+    0 12px 32px #29476b0c;
+}
+body[data-theme='glass'] .theme-caption {
+  color: #203650;
+  padding: 18px 4px 10px;
+}
+body[data-theme='glass'] .theme-desc {
+  color: #53677f;
+  padding: 0 4px 8px;
+  line-height: 1.5;
+}
+/* The preview stays recognizable while another theme is active, too. */
+.mini.glass {
+  color: #234d80;
+  background: linear-gradient(135deg, #e4effb, #f7fbff 65%, #dae9f8);
+  border: 1px solid #fff;
+  box-shadow:
+    inset 0 1px 0 #fff,
+    inset 0 -1px 0 #b8ccdf55;
+}
+.mini.glass .mini-header {
+  color: #2d527e;
+  border-color: #acc4df66;
+  gap: 8px;
+}
+.mini.glass .mini-header b {
+  flex-shrink: 0;
+}
+.mini.glass .mini-header span {
+  text-align: right;
+}
+.mini.glass .mini-number {
+  color: #1d3e66;
+}
+.mini.glass .mini-bars {
+  padding: 7px 8px 0;
+  border: 1px solid #fff;
+  border-radius: 9px;
+  background: #ffffffa6;
+}
+.mini.glass .mini-bars i {
+  color: #4e82bb;
+  opacity: 0.42;
+}
+.mini.glass .mini-bars i:last-child {
+  opacity: 1;
+}
+body[data-theme='glass'] .onboard-footer {
+  border-color: #aac0d44d;
+  padding-top: 26px;
+}
+body[data-theme='glass'] .promise {
+  color: #52677f;
+}
+body[data-theme='glass'] .big-input {
+  background: #ffffff9c;
+  border: 1px solid #b8c9dd;
+  border-radius: 16px;
+  padding: 20px 24px;
+  font-size: 30px;
+  box-shadow:
+    inset 0 1px 0 #fff,
+    0 8px 24px #29476b05;
+}
+body[data-theme='glass'] .number-picker button {
+  color: #24588f;
+  border-color: #bdd0e5;
+  background: #ffffffd6;
+  box-shadow: inset 0 1px 0 #fff;
+}
+body[data-theme='glass'] .number-picker input {
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+body[data-theme='glass'] .choice {
+  border-color: #d1dfef;
+}
+body[data-theme='glass'] .choice b {
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 700;
+}
+body[data-theme='glass'] .choice small {
+  color: #435a73;
+  font-size: 13px;
+  line-height: 1.6;
+}
+body[data-theme='glass'] .choice.active {
+  background: #e8f1fc;
+  border-color: #7d9fc7;
+}
+body[data-theme='glass'] .scale div {
+  background: #e2edf9;
+  border: 1px solid #d0dfef;
+  color: #234d80;
+}
+body[data-theme='glass'] .scale small {
+  color: #345473;
+  font-size: 11px;
+}
+body[data-theme='glass'] .subject-entry {
+  border-color: #b7c9dc55;
+}
+
+/* Dashboard, navigation, scenarios and dialogs use the same glass language. */
+body[data-theme='glass'] .sidebar {
+  background: #f6faffc7;
+  border-right: 1px solid #fff;
+  box-shadow: 8px 0 30px #29476b03;
+}
+body[data-theme='glass'] .nav button {
+  color: #52677f;
+}
+body[data-theme='glass'] .nav button.active {
+  color: #244f87;
+  background: #dceafb;
+  box-shadow: inset 0 1px 0 #ffffffa6;
+}
+body[data-theme='glass'] .profile {
+  border-color: #b7c9dc55;
+}
+body[data-theme='glass'] .avatar {
+  color: #24588f;
+  background: #e0ecfa;
+  border: 1px solid #fff;
+}
+body[data-theme='glass'] .workbar {
+  border-color: #b7c9dc55;
+}
+body[data-theme='glass'] .workbar select {
+  background: none;
+  border: 0;
+  box-shadow: none;
+}
+body[data-theme='glass'] .hero-metric {
+  color: #f6faff;
+  background: linear-gradient(135deg, #244b7c, #182f50);
+  border: 1px solid #49698f;
+  box-shadow:
+    inset 0 1px 0 #ffffff30,
+    0 12px 32px #234a7b1c;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+body[data-theme='glass'] .hero-metric .eyebrow,
+body[data-theme='glass'] .hero-metric small {
+  color: #dfebf9;
+  opacity: 1;
+}
+body[data-theme='glass'] .hero-metric .pill {
+  color: #edf6ff;
+  background: #ffffff1c;
+  border: 1px solid #ffffff20;
+}
+body[data-theme='glass'] .hero-metric .metric-footer {
+  color: #e4effc;
+}
+body[data-theme='glass'] .arc-decoration {
+  border-color: #ffffff1f;
+  box-shadow:
+    0 0 0 30px #ffffff04,
+    0 0 0 60px #ffffff03;
+}
+body[data-theme='glass'] th {
+  color: #536d89;
+}
+body[data-theme='glass'] :is(th, td, .insight, .scenario-sub, .component) {
+  border-color: #b7c9dc42;
+}
+body[data-theme='glass'] .scenario-card.active {
+  background: #e4effb;
+  border-color: #7d9fc7;
+}
+body[data-theme='glass'] .settings-themes button {
+  background: #ffffffc7;
+  border-color: #c3d4e7;
+}
+body[data-theme='glass'] .settings-themes button.active {
+  background: #e4effb;
+  border-color: #6d94c0;
+}
+body[data-theme='glass'] .bookmark {
+  background: #ffffff7d;
+  border: 1px solid #c1d3e7;
+}
+body[data-theme='glass'] dialog {
+  background: #f6fafff5;
+  border-color: #fff;
+  box-shadow:
+    0 24px 100px #15345733,
+    inset 0 1px 0 #fff;
+}
+body[data-theme='glass'] dialog::backdrop {
+  background: #122d4f55;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+body[data-theme='glass'] .error {
+  color: #913a25;
+  background: #fff0e9;
+  border: 1px solid #e4b7a6;
+}
+body[data-theme='glass'] #toast {
+  background: #203e65;
+  color: #fff;
+  box-shadow: 0 8px 30px #1a355733;
+}
+
+/* Transform/opacity animations on a blur ancestor can cause missing paint in
+   embedded Chromium. Animate controls, never the whole frosted page. */
+body[data-theme='glass'] .onboard,
+body[data-theme='glass'] .page-content {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  body[data-theme='glass'] {
+    --panel: #f9fcff;
+  }
+  body[data-theme='glass'] .sidebar {
+    background: #f4f8fd;
+  }
+}
+@media (max-width: 760px) {
+  body[data-theme='glass'] .topbar {
+    height: 80px;
+    padding: 0 24px;
+  }
+  body[data-theme='glass'] .onboard {
+    margin-top: 20px;
+  }
+  body[data-theme='glass'] .onboard-top {
+    margin-bottom: 32px;
+  }
+  body[data-theme='glass'] .theme-grid {
+    gap: 14px;
+  }
+  body[data-theme='glass'] .theme-card {
+    padding: 10px;
+    border-radius: 20px;
+  }
+  body[data-theme='glass'] .theme-caption {
+    padding-top: 13px;
+    font-size: 12px;
+    gap: 4px;
+  }
+  body[data-theme='glass'] .theme-desc {
+    font-size: 10px;
+  }
+  body[data-theme='glass'] .panel {
+    padding: 21px;
+    border-radius: 20px;
+  }
+  body[data-theme='glass'] .sidebar {
+    background: #f5fafff0;
+    border-top: 1px solid #fff;
+    box-shadow: 0 -4px 24px #29476b0b;
+  }
+  body[data-theme='glass'] .nav button.active {
+    box-shadow: inset 0 2px 0 #4279b9;
+  }
+  body[data-theme='glass'] .big-input {
+    font-size: 26px;
+    padding: 18px;
+  }
+  body[data-theme='glass'] dialog {
+    padding: 22px;
+  }
+  body[data-theme='glass'] #editor-fields > .row,
+  body[data-theme='glass'] .onboard .form-area > .row {
+    flex-wrap: wrap;
+  }
+  body[data-theme='glass'] #assessment-preset {
+    max-width: 100% !important;
+  }
+}
+@media print {
+  body[data-theme='glass'] {
+    background: #fff;
+    color: #000;
+  }
+}
